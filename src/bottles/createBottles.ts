@@ -1,6 +1,7 @@
 import {Bottle} from "./bottle";
 import {lvlConfig} from "./config";
 import {Bottles} from "./bottles";
+import {setRandomSeed} from "./utils";
 
 
 
@@ -9,7 +10,7 @@ export function createLvl(lvl: number): Bottles {
   let colors = cfg.colors;
   if (lvl % 10 === 0) colors--;
 
-  // todo set random seed to lvl
+  setRandomSeed(lvl);
 
   return createBottles(colors, 2);
 }

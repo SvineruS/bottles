@@ -1,5 +1,14 @@
+let _rndSeed = 1;
+
+export function setRandomSeed(seed: number) {
+  _rndSeed = seed * 10000;
+}
+
 export function random(to: number): number {
-  return Math.floor(Math.random() * to);
+  const x = Math.sin(_rndSeed) * 10000;
+  const rnd = x - Math.floor(x);
+  _rndSeed += rnd;
+  return Math.floor(rnd * to)
 }
 
 export class History<T> {
