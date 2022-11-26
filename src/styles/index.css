@@ -1,0 +1,52 @@
+body {
+    background-color: gray;
+    margin: 0;
+    min-width: 500px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 10px 0;
+}
+
+.header button {
+    background-color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.header .lvl {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.win {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.win div {
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    padding: 50px;
+}
+
+.win button {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: yellow;
+    color: gray;
+    padding: 40px 80px;
+    border: none;
+    border-radius: 20px;
+}

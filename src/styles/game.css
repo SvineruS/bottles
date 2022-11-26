@@ -1,0 +1,77 @@
+
+.bottles {
+    margin: 50px auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bottle {
+    width: 50px;
+    margin: 5px;
+    border: lightgray 1px solid;
+    position: relative;
+    transition: all ease-out 0.1s;
+    top: 0; /*for transitions*/
+}
+
+.selected {
+    top: -50px;
+}
+
+.bottleColorContainer {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+}
+
+.bottleColor {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /*transition: all ease-out 0.1s;*/
+    /*top: 0; !*for transitions*!*/
+}
+
+@keyframes color-pouring {
+    from {
+        top: 0;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(10deg);
+    }
+    50% {
+        transform: rotateZ(0);
+    }
+    75% {
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+@media {
+    .pour-in {
+        animation: color-pouring reverse 0.1s linear;
+    }
+
+    .pour-out {
+        animation: color-pouring 0.1s linear;
+        top: 50px;
+    }
+
+    .shake {
+        animation: shake 0.1s ease-in;
+    }
+}
